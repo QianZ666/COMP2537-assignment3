@@ -14,13 +14,13 @@ const difficultySettings = {
 };
 
 function updateStatus() {
-  $('#clicks').text(`Clicks: ${clickCount}`);
-  $('#matched').text(`Matched: ${matchedCount}`);
-  $('#pairs').text(`Pairs Left: ${totalPairs - matchedCount}`);
-  $('#timer').text(`Time Left: ${timeLeft}s`);
-  $('#total-time').text(`Total Time: ${totalTime}s`);
+  $('#clicks').text(`Number of Clicks: ${clickCount}`);
+  $('#matched').text(`Number of Matches: ${matchedCount}`);
+  $('#pairs-left').text(`Number of Pairs Left: ${totalPairs - matchedCount}`);
+  $('#total-pairs').text(`Total Number of Pairs: ${totalPairs}`);
+  $('#timer').text(`${timeLeft}s`);
+  $('#total-seconds').text(`${totalTime}s`);
 }
-
 function startTimer() {
   clearInterval(timer);
   timer = setInterval(() => {
